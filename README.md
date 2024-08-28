@@ -69,7 +69,7 @@ If you still need to add NvChad to your configuration, welcome!
 # Quick use without installation to try
 
 ```console
-nix run github:NvChad/nix/#nvchad
+nix run github:nixos-community/nix4nvchad/#nvchad
 ```
 
 ⚠️**WARNING**⚠️
@@ -103,7 +103,7 @@ containing your NixOS configuration:
     };
     # ...
     nvchad4nix = {
-      url = "github:NvChad/nix";
+      url = "github:nix-community/nix4nvchad";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # ...
@@ -405,10 +405,11 @@ You can use your own nvchad by providing [Starter](https://github.com/NvChad/sta
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Custom NvChad starter config
     nvchad-starter = {
       url = "github.com:NvChad/starter";
-      flakes = false;
-    }
+      flake = false;
+    };
     # NvChad:
     nvchad4nix = {
       url = "github:NvChad/nix";
